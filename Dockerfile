@@ -6,8 +6,7 @@ FROM alpine:3.10
 
 ENV AWSCLI_VERSION 1.16.190
 
-RUN apk add -U --no-cache python3 ca-certificates \
-    && apk add --update curl \
+RUN apk add -U --no-cache python3 ca-certificates curl bash \
     && pip3 install --no-cache-dir --upgrade pip \
     && pip3 --no-cache-dir install awscli==${AWSCLI_VERSION}
 
